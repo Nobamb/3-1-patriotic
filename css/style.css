@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/* 기본 초기화 및 폰트 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 상단 네비게이션 바 */
+header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    height: 60px;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 햄버거 메뉴 버튼 (데스크탑에서는 숨김) */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* 컨트롤 영역 (데스크탑: 헤더 우측 / 모바일&태블릿: 슬라이드 메뉴) */
+.controls-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-title-mobile {
+    display: none;
+}
+
+/* 모바일용 메뉴 타이틀 */
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 300px;
+    font-size: 0.9rem;
+}
+
+.btn-google,
+.btn-namu {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.btn-google {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-namu {
+    background-color: #00a651;
+    color: #fff;
+}
+
+.music-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 메인 컨텐츠 영역 */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* 태극기 느낌의 외부 카드 */
+.card-outer {
+    width: 100%;
+    max-width: 800px;
+    min-height: 600px;
+    background: linear-gradient(to bottom, #cd313a 0%, #cd313a 20%, #0047a0 80%, #0047a0 100%);
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 실제 내용이 들어가는 내부 카드 */
+.card-inner {
+    background: linear-gradient(to bottom, #ffe6e6, #e6eaff);
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 퀴즈 영역 */
+.quiz-item {
+    margin-bottom: 25px;
+}
+
+.quiz-question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    word-break: keep-all;
+}
+
+.quiz-options {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.quiz-options label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 결과 화면 영역 */
+#resultContainer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+#resultContainer h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+#resultContainer p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* 하단 이전/다음 버튼 영역 */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.nav-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: #333;
+}
+
+.right-align {
+    margin-left: auto;
+}
+
+/* 푸터 */
+footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
